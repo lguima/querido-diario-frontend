@@ -1,0 +1,72 @@
+@font-face {
+  font-family: Baloo-Bold;
+  src: url(/assets/fonts/baloo/Baloo2-Bold.ttf);
+}
+
+@font-face {
+  font-family: Lato-Bold;
+  src: url(/assets/fonts/lato/Lato-Bold.ttf);
+}
+
+ul {
+  list-style-type: none;
+  margin: 10px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container, header {
+  width: 900px;
+  margin: 0 auto;
+}
+
+.logo .mat-figure {
+  justify-content: left !important;
+}
+
+.bg-white-1 {
+  background-color: #F3E9E9;
+}
+
+.bg-purple-1 {
+  background-color: #2C1338;
+  color: #FFF;
+}
+
+.bg-purple-2 {
+  background-color: #351E41;
+  color: #FFF;
+}
+
+h1 {
+  height: 84px;
+  width: 744px;
+  color: #2C1338;
+  font-family: "Baloo-Bold";
+  font-size: 36px;
+  font-weight: 800;
+  letter-spacing: -0.6px;
+  line-height: 42px;
+}
+
+h2 {
+  height: 42px;
+  color: #F3E9E9;
+  font-family: "Baloo-Bold";
+  font-size: 36px;
+  font-weight: 800;
+  letter-spacing: -0.6px;
+  line-height: 42px;
+}
+
+.card p {
+  color: #F3E9E9;
+  font-family: Lato-Bold;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 28px;
+}
