@@ -8,19 +8,87 @@
   src: url(/assets/fonts/lato/Lato-Bold.ttf);
 }
 
+@font-face {
+  font-family: Lato-Light;
+  src: url(/assets/fonts/lato/Lato-Light.ttf);
+}
+
+@font-face {
+  font-family: Lato-Regular;
+  src: url(/assets/fonts/lato/Lato-Regular.ttf);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
 ul {
   list-style-type: none;
-  margin: 10px;
+}
+
+#root {
+  background-color: #F3E9E9;
 }
 
 header {
   display: flex;
   justify-content: space-between;
+  height: 54px;
+  width: 1220px;
+  background-color: #F3E9E9;
+
+  nav {
+    display: flex;
+  }
+
+  a {
+    color: #5E3F8E;
+    font-family: Lato-Regular;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 28px;
+    margin: 15px;
+
+    mat-icon {
+      height: 36px;
+      width: 36px;
+    }
+  }
+
+  button.btn {
+    height: 42px;
+    width: 76px;
+    border-radius: 21px;
+    background-color: #FF8500;
+    color: #FFF;
+    font-family: Lato-Regular;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 21px;
+    text-align: center;
+    align-self: center;
+    border: none;
+  }
+
+  .logo {
+    height: 36px;
+    width: 118.03px;
+    align-self: center;
+  }
 }
 
 .container, header {
-  width: 900px;
+  width: 1220px;
   margin: 0 auto;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 .logo .mat-figure {
@@ -29,6 +97,9 @@ header {
 
 .bg-white-1 {
   background-color: #F3E9E9;
+  h2 {
+    color: #5E3F8E;
+  }
 }
 
 .bg-purple-1 {
@@ -39,6 +110,10 @@ header {
 .bg-purple-2 {
   background-color: #351E41;
   color: #FFF;
+}
+
+.bg-purple-3 {
+  background-color: #5E3F8E;
 }
 
 h1 {
@@ -62,6 +137,40 @@ h2 {
   line-height: 42px;
 }
 
+.flex {
+  display: flex;
+}
+
+.follow-card {
+  .count {
+    color: #F3E9E9;
+    font-family: Lato-Bold;
+    font-size: 42px;
+    font-weight: 900;
+    letter-spacing: -0.7px;
+    line-height: 33px;
+  }
+
+  .content-inner {
+    width: 280px;
+  }
+
+  p {
+    color: #F3E9E9;
+    font-family: Lato-Regular;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 28px;
+  }
+
+  mat-icon {
+    height: 76px;
+    width: 76px;
+    margin-right: 24px;
+  }
+}
+
 .card p {
   color: #F3E9E9;
   font-family: Lato-Bold;
@@ -69,4 +178,368 @@ h2 {
   font-weight: 600;
   letter-spacing: 0;
   line-height: 28px;
+}
+
+.card {
+  height: 100%;
+}
+
+.box-icon {
+  height: 53.22px;
+  width: 40px;
+}
+
+.document-icon {
+  height: 60.61px;
+  width: 36px;
+}
+
+.dev-icon {
+  height: 39.54px;
+  width: 40px;
+}
+
+.hand-icon {
+  height: 119.81px;
+  width: 73.39px;
+}
+
+.computer-icon {
+  height: 120.37px;
+  width: 115.6px;
+}
+
+.project-icon {
+  height: 127.71px;
+  width: 108.62px;
+}
+
+.graphics-icon {
+  height: 120px;
+  width: 108.62px;
+}
+
+.goals {
+  .container-inner {
+    margin-left: 120px;
+
+    p {
+      color: #F3E9E9;
+      font-family: Lato-Regular;
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 0;
+      line-height: 28px;
+    }
+  }
+}
+
+.goals mat-grid-tile {
+
+  ul {
+    margin: 0px; 
+    width: 222px;
+    height: 100%;
+    background-color: #F3E9E9;
+    padding: 30px;
+  }
+
+  li.title {
+    color: #2C1338;
+    font-family: Lato-Bold;
+    font-size: 24px;
+    font-weight: 900;
+    letter-spacing: -0.57px;
+    line-height: 23px;
+  }
+
+  li {
+    margin: 20px 0;
+    color: #2C1338;
+    font-family: Lato-Regular;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 28px;
+
+    a {
+      color: #966BE8;
+      font-family: Lato-Bold;
+      font-size: 16px;
+      font-weight: bold;
+      letter-spacing: 0;
+      line-height: 16px;
+
+      mat-icon {
+        height: 12px;
+        width: 12px;
+      }
+    }
+
+  }
+
+  li.money {
+    color: #966BE8;
+    font-family: Lato-Bold;
+    font-size: 36px;
+    font-weight: 900;
+    letter-spacing: -0.6px;
+    line-height: 42px;
+
+    span {
+      color: #2C1338;
+    }
+  }
+}
+
+.help {
+  ul {
+    width: 380px;
+
+    li:first-child {
+      margin-bottom: 32px;
+    }
+
+    li.title {
+      color: #F3E9E9;
+      font-family: Lato-Bold;
+      font-size: 24px;
+      font-weight: 900;
+      letter-spacing: -0.57px;
+      line-height: 23px;
+      margin-bottom: 6px;
+    }
+
+    li {
+      color: #F3E9E9;
+      font-family: Lato-Regular;
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 0;
+      line-height: 28px;
+    }
+  }
+
+  button {
+    border: none;
+    margin-top: 26px;
+  }
+
+  button.donation {
+    color: #FFFFFF;
+    font-family: Lato-Regular;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 21px;
+    text-align: center;
+    height: 42px;
+    width: 76px;
+    border-radius: 21px;
+    background-color: #FF8500;
+    margin-right: 12px;
+  }
+
+  button.goals {
+    color: #2C1338;
+    font-family: Lato-Regular;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 21px;
+    text-align: center;
+    height: 42px;
+    width: 179px;
+    border-radius: 21px;
+    background-color: #FFFCBD;
+  }
+
+  button.censo {
+    color: #2C1338;
+    font-family: Lato-Regular;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 21px;
+    text-align: center;
+    height: 42px;
+    width: 148px;
+    border-radius: 21px;
+    background-color: #FFFCBD;
+  }
+
+  button.start {
+    height: 42px;
+    width: 183px;
+    border-radius: 21px;
+    background-color: #FFFCBD;
+    color: #2C1338;
+    font-family: Lato-Regular;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 21px;
+    text-align: center;
+  }
+}
+
+.partners {
+  div {
+    height: 86px;
+    
+    p {
+      color: #5E3F8E;
+      font-family: Lato-Light;
+      font-size: 14px;
+      letter-spacing: 0;
+      line-height: 16px;
+      text-transform: uppercase;
+    }
+
+    ul {
+      display: flex;
+      margin-top: 24px;
+    }
+
+    ul li mat-icon {
+      width: 115px;
+      margin-right: 34px;
+    }
+  }
+
+  .logo-OK {
+    height: 30.37px;
+    width: 115.58px;
+  }
+
+  .logo-serenata {
+    height: 40.9px;
+    width: 81.39px;
+  }
+
+  .logo-embaixadores {
+    height: 18px;
+    width: 116px;
+  }
+
+  .logo-Ilda {
+    height: 17px;
+    width: 52px;
+  }
+
+  .logo-jurema {
+    height: 18px;
+    width: 80px;
+  }
+
+  .logo-digitalocean {
+    height: 18.7px;
+    width: 110.14px;
+  }
+}
+
+.sitemap {
+  padding-top: 84px;
+
+  ul {
+    align-self: end;
+  }
+  ul li:first-child {
+    opacity: 0.5;
+    color: #F3E9E9;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: 16px;
+    text-transform: uppercase;
+    font-family: Lato-Light;
+  }
+
+  ul li {
+    margin: 7px 0;
+    color: #FFF;
+    font-family: Lato-Regular;
+  }
+}
+
+.summary {
+
+  .container-inner {
+    margin-left: 120px;
+  }
+
+  mat-grid-list {
+    margin-top: -100px; 
+  }
+
+  ul {
+    height: 100%;
+    width: 325px;
+    background-color: #5E3F8E;
+    color: #FFF;
+    padding: 42px 30px;
+
+    li:first-child {
+      color: #F3E9E9;
+      font-family: Lato-Bold;
+      font-size: 24px;
+      font-weight: 900;
+      letter-spacing: -0.57px;
+      line-height: 23px;
+    }
+
+    li {
+      color: #F3E9E9;
+      font-family: Lato-Regular;
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 0;
+      line-height: 28px;
+      margin: 6px 0;
+
+      a {
+        color: #F3E9E9;
+        font-family: Lato-Bold;
+        font-size: 16px;
+        font-weight: bold;
+        letter-spacing: 0;
+        line-height: 16px;
+
+        mat-icon {
+          height: 12px;
+          width: 12px;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  padding: 80px 0;
+
+  p { color: #F3E9E9; }
+
+  mat-icon {
+    height: 36px;
+    width: 36px;
+    opacity: 0.5;
+  }
+
+  div:first-child {
+    display: flex;
+    flex-direction: row;
+    font-family: Lato-Light;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: 16px;
+  }
+
+  .icons {
+    width: 100px;
+    margin-right: 30px;
+    justify-content: space-between;
+  }
+}
+
+.mat-grid-tile > ::ng-deep figure  {
+  justify-content: unset !important;
 }
