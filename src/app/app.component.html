@@ -1,62 +1,75 @@
 <div id="root">
   <header>
-    <mat-icon svgIcon="logo" class="logo"></mat-icon>
-    <nav>
-      <a>Explore</a>
-      <a>Tecnologia</a>
-      <a>Sobre o querido diário</a>
-      <a><mat-icon svgIcon="notification" class="notification"></mat-icon></a>
-      <button class='btn'>Apoie</button>
-    </nav>
+    <div class="container">
+      <mat-icon svgIcon="logo" class="logo"></mat-icon>
+      <nav>
+        <a>Explore</a>
+        <a>Tecnologia</a>
+        <a>Sobre o querido diário</a>
+        <a>
+          <mat-icon svgIcon="notification" class="notification"></mat-icon>
+        </a>
+        <button class='btn'>Apoie</button>
+      </nav>
+    </div>
   </header>
 
 
   <section class="bg-white-1">
-    <div class="container" style="height: 442px;">
-      <mat-grid-list cols="1" rowHeight="442px">
-        <mat-grid-tile>
-          <h1>Explore os diários oficiais dos municípios e fique de olho nas ações dos governos</h1>
-          <form>
-          </form>
-        </mat-grid-tile>
-      </mat-grid-list>
+    <div class="container explore" style="height: 442px;">
+      <div>
+        <h1>Explore os diários oficiais dos municípios e fique de olho nas ações dos governos</h1>
+        <form>
+          <ul>
+            <li class="search">
+              <input type="text" placeholder="Ex.: licitação, contratação, COVID 19">
+            </li>
+
+            <li class="city">
+              <input type="text" placeholder="Municípios">
+            </li>
+
+            <li class="period">
+              <input type="text" placeholder="Período">
+            </li>
+
+            <li>
+              <button class='btn'>Pesquisar</button>
+            </li>
+          </ul>
+        </form>
+      </div>
     </div>
   </section>
   <section class="bg-purple-1">
-    <div class="container" style="height: 460px;">
+    <div class="container follow" style="height: 460px;">
       <h2>Acompanhe a evolução do Querido Diário</h2>
       <mat-grid-list cols="3" rowHeight="106px">
         <mat-grid-tile>
           <div class="follow-card flex">
-            <div>
-              <mat-icon svgIcon="check"></mat-icon>
-            </div>
-            <div class="content-inner">
-              <p class="count">12</p>
-              <p>Cidade já estão na plataforma</p>
-            </div>
+            <mat-icon svgIcon="check"></mat-icon>
+            <ul class="content-inner">
+              <li class="count">12</li>
+              <li>Cidade já estão na plataforma</li>
+            </ul>
           </div>
         </mat-grid-tile>
         <mat-grid-tile>
           <div class="follow-card flex">
-            <div>
-              <mat-icon svgIcon="search"></mat-icon>
-            </div>
-            <div class="content-inner">
-              <p class="count">2.226</p>
-              <p>Cidades já têm robôs para coletar diários</p>
-            </div>
+            <mat-icon svgIcon="search"></mat-icon>
+            <ul class="content-inner">
+              <li class="count">2.226</li>
+              <li>Cidades já têm robôs para coletar diários</li>
+            </ul>
           </div>
         </mat-grid-tile>
         <mat-grid-tile>
           <div class="follow-card flex">
-            <div>
-              <mat-icon svgIcon="pin"></mat-icon>
-            </div>
-            <div class="content-inner">
-              <p class="count">597</p>
-              <p>Cidades já foram mapeadas pelo censo</p>
-            </div>
+            <mat-icon svgIcon="pin"></mat-icon>
+            <ul class="content-inner">
+              <li class="count">597</li>
+              <li>Cidades já foram mapeadas pelo censo</li>
+            </ul>
           </div>
         </mat-grid-tile>
       </mat-grid-list>
@@ -120,11 +133,12 @@
                 Contribua como desenvolvedor
               </li>
               <li>
-                Contribua com código - o Querido Diário é um projeto de código aberto, então qualquer pessoa pode colaborar com novas funcionalidades para a plataforma
+                Contribua com código - o Querido Diário é um projeto de código aberto, então qualquer pessoa pode
+                colaborar com novas funcionalidades para a plataforma
               </li>
               <li>
                 <button class="start">
-                 Comece por aqui
+                  Comece por aqui
                 </button>
               </li>
             </ul>
