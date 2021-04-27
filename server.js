@@ -1,4 +1,5 @@
-const express = require('express');
+const express = require('express')
+
 const forceSSL = function () {
   return function (req, res, next) {
     if (req.headers['x-forwarded-proto'] !== 'https') {
@@ -9,10 +10,12 @@ const forceSSL = function () {
     next();
   }
 }
+
 const app = express();
 app.use(forceSSL());
-app.use(express.static(__dirname + '/dist'));
-app.get('/*', function(req, res) {
-  res.sendFile(path.join(__dirname + '/dist/index.html'));
+
+app.get('/', function (req, res) {
+  res.sendFile(__dirname + '/dist/querido-diario-frontend/index.html');
 });
+
 app.listen(process.env.PORT || 8080);
