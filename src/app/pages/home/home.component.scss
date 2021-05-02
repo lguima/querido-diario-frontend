@@ -4,7 +4,8 @@
   box-sizing: border-box;
 }
 
-a, button {
+a,
+button {
   cursor: pointer;
 }
 
@@ -221,6 +222,13 @@ h2 {
     height: rem(76);
     width: rem(76);
     margin-right: rem(24);
+  }
+}
+
+.follow {
+  .white-arrow {
+    height: rem(12);
+    width: rem(12);
   }
 }
 
@@ -461,7 +469,7 @@ h2 {
   width: rem(380);
 
   h3 {
-    color: #F3E9E9;
+    color: #f3e9e9;
     font-family: Lato-Bold;
     font-size: rem(24);
     font-weight: 900;
@@ -569,7 +577,6 @@ h2 {
 }
 
 .partners {
-
   mat-icon {
     margin-right: rem(34);
   }
@@ -716,8 +723,8 @@ footer {
 }
 
 .video {
-  img { 
-    margin: 0 auto; 
+  img {
+    margin: 0 auto;
   }
 
   mat-icon {
@@ -729,7 +736,6 @@ footer {
   }
 }
 @media only screen and (max-width: 768px) {
-
   :host {
     overflow-x: hidden;
   }
@@ -797,7 +803,7 @@ footer {
   }
 
   .support {
-    margin-bottom: rem(54)
+    margin-bottom: rem(54);
   }
 
   .social {
@@ -808,12 +814,12 @@ footer {
     height: rem(108);
     width: rem(80);
   }
-  
+
   .document-icon {
     height: rem(120);
     width: rem(72);
   }
-  
+
   .dev-icon {
     height: rem(120);
     width: rem(120);
@@ -828,6 +834,10 @@ footer {
   .video {
     img {
       width: 100%;
+    }
+
+    mat-icon {
+      left: 42%;
     }
   }
 }
