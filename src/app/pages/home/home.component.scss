@@ -1,6 +1,11 @@
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
+}
+
+a, button {
+  cursor: pointer;
 }
 
 @function rem($px) {
@@ -11,7 +16,7 @@
   width: 100%;
 }
 
-section, footer {
+.container {
   padding: rem(80) 0;
 }
 
@@ -33,6 +38,7 @@ header {
     flex-direction: row;
     justify-content: space-between;
     height: rem(54);
+    padding: 0 0;
   }
 
   nav {
@@ -113,7 +119,6 @@ form {
     background-color: #f3e9e9;
     border-bottom: rem(1) solid #2e194f;
     width: 100%;
-    margin-right: rem(18);
   }
 
   mat-form-field {
@@ -454,6 +459,23 @@ h2 {
 .help-card {
   height: rem(256);
   width: rem(380);
+
+  h3 {
+    color: #F3E9E9;
+    font-family: Lato-Bold;
+    font-size: rem(24);
+    font-weight: 900;
+    letter-spacing: rem(-0.57);
+    line-height: rem(23);
+  }
+
+  mat-icon {
+    margin-bottom: 34px;
+  }
+
+  button {
+    margin-top: rem(32);
+  }
 }
 
 .help {
@@ -693,10 +715,28 @@ footer {
   justify-content: unset !important;
 }
 
+.video {
+  img { 
+    margin: 0 auto; 
+  }
+
+  mat-icon {
+    height: rem(50);
+    width: rem(50);
+    align-self: center;
+    position: absolute;
+    left: 50%;
+  }
+}
 @media only screen and (max-width: 768px) {
+
+  :host {
+    overflow-x: hidden;
+  }
+
   .container {
     width: 100%;
-    padding: 0 rem(16);
+    padding: rem(40) rem(16);
   }
 
   form {
@@ -724,7 +764,6 @@ footer {
   }
 
   .help-card {
-    height: rem(179);
     width: 100%;
     align-self: center;
 
@@ -780,4 +819,15 @@ footer {
     width: rem(120);
   }
 
+  .help-card {
+    bottom {
+      margin-top: rem(16);
+    }
+  }
+
+  .video {
+    img {
+      width: 100%;
+    }
+  }
 }
