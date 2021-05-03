@@ -1,20 +1,6 @@
 <div fxLayout="column">
-  <header fxLayout="row">
-    <div class="container">
-      <mat-icon svgIcon="logo" class="logo"></mat-icon>
-      <nav>
-        <a>Explore</a>
-        <a>Tecnologia</a>
-        <a>Sobre o querido diário</a>
-        <a>
-          <mat-icon svgIcon="notification" class="notification"></mat-icon>
-        </a>
-        <button class='btn'>Apoie</button>
-      </nav>
-    </div>
-  </header>
-
-
+  <app-header></app-header>
+  
   <section class="explore-section" fxLayoutAlign="center" fxLayout="row" class="bg-white-1">
     <div class="container">
       <div fxLayout="column" class="explore" fxLayoutAlign="center" fxFlex>
@@ -314,7 +300,8 @@
         </div>
       </div>
 
-      <div fxLayout="row" fxLayout.xs="column" class="container-inner" fxLayoutAlign="space-between" fxLayoutGap.xs="12px">
+      <div fxLayout="row" fxLayout.xs="column" class="container-inner" fxLayoutAlign="space-between"
+        fxLayoutGap.xs="12px">
         <div fxLayout="column" fxFlex="10%">
           <div fxLayout="row" fxLayoutAlign="space-around" fxLayoutGap.xs="12px" fxLayoutAlign.xs="start">
             <mat-icon svgIcon="bitmap"></mat-icon>

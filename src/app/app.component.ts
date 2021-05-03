@@ -39,6 +39,8 @@ const Icons: string[] = [
   '../assets/icons/play.svg',
 
   '../assets/icons/white-arrow.svg',
+
+  '../assets/icons/bars.svg'
 ]
 
 @Component({
