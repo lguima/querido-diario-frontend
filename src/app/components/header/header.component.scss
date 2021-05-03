@@ -41,7 +41,6 @@ header {
     font-weight: 600;
     letter-spacing: 0;
     line-height: rem(28);
-    margin: rem(15);
 
     mat-icon {
       height: rem(36);
@@ -80,4 +79,16 @@ header {
 .container {
   width: rem(1220);
   margin: 0 auto;
+}
+
+@media only screen and (max-width: 768px) {
+  header {
+    .container {
+      padding: 0 rem(16);
+
+      a {
+        align-self: center;
+      }
+    }
+  }
 }

@@ -10,8 +10,10 @@
       </a>
       <button class='btn'>Apoie</button>
     </nav>
-    <a fxHide fxHide.xs="false">
+    <a (click)="openDialog()" fxHide fxHide.xs="false">
       <mat-icon svgIcon="bars" class="bars"></mat-icon>
     </a>
   </div>
+  <app-modal fxHide>
+  </app-modal>
 </header>
