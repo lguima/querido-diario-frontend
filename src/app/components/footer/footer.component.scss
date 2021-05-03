@@ -1,10 +1,10 @@
+@function rem($px) {
+  @return #{$px / 16}rem;
+}
+
 .footer {
   width: rem(1220);
   margin: 0 auto;
-}
-
-@function rem($px) {
-  @return #{$px / 16}rem;
 }
 
 footer {
@@ -42,14 +42,19 @@ footer {
 }
 
 .container {
-  padding: rem(40) rem(16);
+  padding: rem(80) 0;
   margin: 0 auto;
-  width: 100%;
+  width: rem(1220)
 }
 
 @media only screen and (max-width: 768px) {
   footer {
     width: 100%;
+
+    .container {
+      padding: rem(40) rem(16);
+      width: 100%;
+    }
   }
 }
 
