@@ -1,28 +1,36 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { ABOUT } from 'src/app/components/footer/data';
-import { INFOS } from '../home/data';
-import { HISTORY, PRIVACY, SUCCESS_CASES, WHOWEARE } from './data';
+import { ContentService } from 'src/app/services/content.service';
+interface Sizeable {
+  height: number;
+  width: number;
+}
+
+type Icon = { file: string } & Sizeable;
+
+const square = (size: number) : Sizeable => {
+  return {
+    height: size,
+    width: size,
+  }
+}
 
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
-  styleUrls: ['./about.component.sass']
+  styleUrls: ['./about.component.sass'],
 })
 export class AboutComponent implements OnInit {
-  content$: Observable<any> = of(null)
-  infos$: Observable<any> = of(INFOS);
+  content$: Observable<any> = of(null);
 
-  constructor() { }
-
-  ngOnInit(): void {
-    this.content$ = of({
-      about: ABOUT,
-      history: HISTORY,
-      successCases: SUCCESS_CASES,
-      whoWeAre: WHOWEARE,
-      privacy: PRIVACY,
-    })
+  icon: Icon = {
+    file: 'right-arrow-purple',
+    ...square(12)
   }
 
+  constructor(private contentService: ContentService) {}
+
+  ngOnInit(): void {
+    this.content$ = this.contentService.find('about');
+  }
 }

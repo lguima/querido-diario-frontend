@@ -1,18 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 
-const defaultContainer = {
-  theme: 'dark',
-  layout: 'column',
-  align: 'left',
-};
-
-interface ContainerProps {
-  layout?: string;
-  theme?: string;
-  align?: string;
-  gap?: number;
-}
-
+const BREAKPOINT = 768;
 @Component({
   selector: 'app-container',
   templateUrl: './container.component.html',
@@ -20,7 +8,10 @@ interface ContainerProps {
 })
 export class ContainerComponent implements OnInit {
   @Input()
-  theme: 'dark' | 'light' = 'dark';
+  theme: 'darker' | 'dark-secondary' | 'dark' | 'light' = 'darker';
+
+  @Input()
+  containerClass: string = 'container';
 
   @Input()
   bg?: string;
@@ -28,8 +19,7 @@ export class ContainerComponent implements OnInit {
   @Input()
   gap: number = 0;
 
-  @Input()
-  title?: string;
+  @Input() gapXs: number = 0;
 
   @Input()
   align: string = 'left';
@@ -37,17 +27,13 @@ export class ContainerComponent implements OnInit {
   @Input()
   layout: string = 'column';
 
-  //container: ContainerProps = defaultContainer;
-
-  //@Input()
-  //containerProps: ContainerProps | null = null;
-
   constructor() {}
 
   ngOnInit(): void {
-    /*if (this.containerProps) {
-      console.log('containerProps ', this.containerProps)
-      this.container = { ...this.container, ...this.containerProps };
-    }*/
+    const viewportWidth =
+      document.documentElement.clientWidth || window.innerWidth;
+    if (viewportWidth < BREAKPOINT && this.gapXs > 0) {
+      this.gap = this.gapXs;
+    }
   }
 }

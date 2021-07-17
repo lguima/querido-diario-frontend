@@ -1,22 +1,29 @@
-<ng-container *ngIf="accessLevels$ | async as accessLevels">
+<ng-container *ngIf="content$ | async as content">
   <app-container theme="light">
     <app-column [gap]="58">
-      <app-column [gap]="16">
-        <h1>{{ accessLevels.title }}</h1>
-        <p>{{ accessLevels.text }}</p>
-      </app-column>
-      <app-row>
-        <ng-container *ngFor="let item of accessLevels.items">
-          <app-column [gap]="16">
+      <div class="container-inner">
+        <app-column [gap]="16">
+          <h1>{{ content.title }}</h1>
+          <p>{{ content.text }}</p>
+        </app-column>
+      </div>
+      <app-row [flex]="true">
+        <ng-container *ngFor="let item of content.items">
+          <app-column [gap]="16" [flex]="true">
             <app-icon [icon]="item.icon"></app-icon>
-            <h3>{{ item.title }}</h3>
-            <div [innerHTML]="item.text"></div>
-            <ng-container *ngFor="let action of item.actions">
-              <app-row>
-                <a>{{ action.text }}</a>
-                <mat-icon svgIcon="right-arrow" class="right-arrow"></mat-icon>
-              </app-row>
-            </ng-container>
+            <app-column [gap]="16" >
+              <h3>{{ item.title }}</h3>
+              <div class="typo-inner" [innerHTML]="item.text"></div>
+              <ng-container *ngFor="let action of item.actions">
+                <app-row class="nav-dark">
+                  <a>{{ action.text }}</a>
+                  <mat-icon
+                    svgIcon="right-arrow"
+                    class="right-arrow"
+                  ></mat-icon>
+                </app-row>
+              </ng-container>
+            </app-column>
           </app-column>
         </ng-container>
       </app-row>

@@ -13,14 +13,34 @@ a,
 button
   cursor: pointer
 
+button
+  border: none
+
+a
+  text-decoration: none
+
+.container-inner
+  padding: 0 rem(100)
+
+.btn-primary, .btn-secondary
+  font-family: Lato
+  font-size: 16px
+  font-weight: bold
+  letter-spacing: 0
+  line-height: 21px
+  text-align: center
+  
 .btn-primary
   background-color: #FF8500
   color: #FFF
 
 .btn-secondary
   background-color: #FFFCBD
-  color: #FFF
   color: #2C1338
+
+.btn-primary, .btn-secondary
+  padding: 10px 23px
+  border-radius: 21px
 
 .mat-h1, .mat-headline, .mat-typography 
   h1
@@ -39,6 +59,7 @@ button
 
   h3
     font-size: rem(20)
+    font-family: Lato
     font-weight: 600
     letter-spacing: 0
     line-height: rem(19)
@@ -49,25 +70,63 @@ button
     letter-spacing: 0
     line-height: rem(28)
 
-.dark
-  background-color: #2C1338
+.dark, .darker
   color: #FFF
+  a
+    color: #FFF
+
+.dark
+  background-color: #351E41
+
 
 .light
   background-color: #F3E9E9
   color: #2C1338
+  
+  p, a, .typo-inner
+    color: #2C1338
+  
+  .mat-h2, .mat-title, .mat-typography h2
+    color: #5E3F8E !important
 
-.lighter
+.darker
+  background-color: #2C1338
+  
+  p, a, .typo-inner
+    color: #FFF
+
+  .mat-h2, .mat-title, .mat-typography h2
+    color: #F3E9E9
+
+  span 
+    a
+      color: #966BE8
+
+
+.dark-secondary
   background-color: #5E3F8E
+
+  .mat-h1 h2, .mat-headline h2, .mat-typography h2
+    color: #FFF !important
   a
     color: #FFF
 
 
+  .mat-h1 h2, .mat-headline h2, .mat-typography h2
+  color: #FFF
 
+  p
+    color: #FFF
 
-  
-a
-  text-decoration: underline
+.nav-secondary
+  a
+    color: #FF8500
+    text-decoration: none
+
+.nav-dark
+  a
+    color: #966BE8
+    font-weight: bold
 
 nav
   a
@@ -77,7 +136,7 @@ h3
   a
     text-decoration: none
 
-p
+p, a
   font-family: Lato
   font-size: 16px
   font-weight: 600
@@ -86,11 +145,27 @@ p
 
 span
   p
-    font-size: 14px
-    line-height: 16px
     opacity: 0.5
+    font-family: Lato
+    font-size: rem(14)
+    letter-spacing: 0
+    line-height: rem(16)
 
-.p-secondary
+a.highlight
+  text-decoration: underline
+  
+.highlight
+  text-decoration: underline
+
+
+.typo-inner
+  font-family: Lato
+  font-size: 16px
+  font-weight: 600
+  letter-spacing: 0
+  line-height: 28px
+
+.typo-secondary
   color: #5E3F8E
   font-family: Lato
   font-size: rem(14)
@@ -146,3 +221,16 @@ nav.color-orange-1 a
 .padding-sm-h
   padding-right: rem(20)
   padding-left: rem(20)
+
+.number
+  color: $white2
+  font-family: Lato
+  font-size: 42px
+  font-weight: 900
+  letter-spacing: -0.7px
+  line-height: 33px
+
+@media only screen and (max-width: 768px)
+  .container-inner
+    width: 100%
+    padding: rem(48) rem(16)
